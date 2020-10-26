@@ -1,0 +1,3 @@
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead1/elsoBeadando_1.09_v2/code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead1/elsoBeadando_1.09_v2/code/cmake-build-debug/CMakeFiles/memoryPool.dir
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead1/elsoBeadando_1.09_v2/code/cmake-build-debug/CMakeFiles/edit_cache.dir

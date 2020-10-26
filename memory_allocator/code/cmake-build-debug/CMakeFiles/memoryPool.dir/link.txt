@@ -1,0 +1,1 @@
+/usr/bin/c++   -g -Werror -Wall -Wextra -pedantic -g  -rdynamic CMakeFiles/memoryPool.dir/main.cpp.o  -o memoryPool 

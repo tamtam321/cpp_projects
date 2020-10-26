@@ -1,0 +1,4 @@
+/home/tam/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.6948.80/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /home/tam/Desktop/Code
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/tam/Desktop/Code/cmake-build-release

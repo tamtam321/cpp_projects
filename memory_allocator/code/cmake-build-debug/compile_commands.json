@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead1/elsoBeadando_1.09_v2/code/cmake-build-debug",
+  "command": "/usr/bin/c++   -I/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead1/elsoBeadando_1.09_v2/code/include   -g -Werror -Wall -Wextra -pedantic -g   -std=gnu++1z -o CMakeFiles/memoryPool.dir/main.cpp.o -c /home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead1/elsoBeadando_1.09_v2/code/main.cpp",
+  "file": "/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead1/elsoBeadando_1.09_v2/code/main.cpp"
+}
+]

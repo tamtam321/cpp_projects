@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead1/elsoBeadando_1.09_v2/code/dynamicPool.hpp
+fixedSizePool.hpp
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead1/elsoBeadando_1.09_v2/code/fixedSizePool.hpp
+memory
+-
+
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead1/elsoBeadando_1.09_v2/code/fixedSizePool.hpp
+exception
+-
+queue
+-
+
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead1/elsoBeadando_1.09_v2/code/main.cpp
+fixedSizePool.hpp
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead1/elsoBeadando_1.09_v2/code/fixedSizePool.hpp
+dynamicPool.hpp
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead1/elsoBeadando_1.09_v2/code/dynamicPool.hpp
+chrono
+-
+cstdlib
+-
+string
+-
+cstring
+-
+fstream
+-
+iostream
+-
+random
+-
+list
+-
+algorithm
+-
+

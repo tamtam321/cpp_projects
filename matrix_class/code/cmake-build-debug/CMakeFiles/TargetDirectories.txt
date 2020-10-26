@@ -1,0 +1,3 @@
+/home/tam/Desktop/PPKE/9_felev/adatszerk_2/kishf/khf01-20200916/AdatAlg_khf01/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tam/Desktop/PPKE/9_felev/adatszerk_2/kishf/khf01-20200916/AdatAlg_khf01/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tam/Desktop/PPKE/9_felev/adatszerk_2/kishf/khf01-20200916/AdatAlg_khf01/cmake-build-debug/CMakeFiles/AdatAlg_khf01.dir

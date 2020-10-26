@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wextra -pedantic -Werror -g   CMakeFiles/AdatAlg_khf01.dir/main.cpp.o  -o AdatAlg_khf01 

@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wextra -pedantic -Werror -O3 -DNDEBUG   CMakeFiles/multilevel_list_test.dir/hw1_main.cpp.o  -o multilevel_list_test 

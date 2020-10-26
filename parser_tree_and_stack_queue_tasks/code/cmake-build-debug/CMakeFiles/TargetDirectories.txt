@@ -1,0 +1,4 @@
+/home/tam/Desktop/PPKE/7_felev/adatszerk/khf2/khf02_1.03/khf02/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tam/Desktop/PPKE/7_felev/adatszerk/khf2/khf02_1.03/khf02/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tam/Desktop/PPKE/7_felev/adatszerk/khf2/khf02_1.03/khf02/cmake-build-debug/CMakeFiles/test.dir
+/home/tam/Desktop/PPKE/7_felev/adatszerk/khf2/khf02_1.03/khf02/cmake-build-debug/CMakeFiles/khf02.dir

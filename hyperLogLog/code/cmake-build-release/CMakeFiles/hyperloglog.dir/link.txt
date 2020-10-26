@@ -1,0 +1,1 @@
+/usr/bin/c++   -Wall -Wextra -pedantic -Werror -O3 -DNDEBUG   CMakeFiles/hyperloglog.dir/main.cpp.o  -o hyperloglog 

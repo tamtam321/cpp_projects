@@ -1,0 +1,401 @@
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <meta name="generator" content="pandoc" />
+   <title></title>
+   <style type="text/css">
+      code {
+         white-space: pre;
+      }
+
+      html, body, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed,
+      figure, figcaption, footer, header, hgroup,
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+         margin: 0;
+         padding: 0;
+         border: 0;
+         font-size: 100%;
+         font: inherit;
+         vertical-align: baseline;
+      }
+      * {
+         box-sizing: border-box;
+      }
+
+      .center {
+         max-width: 90%;
+         margin: auto;
+      }
+
+      .space_after {
+         margin-bottom: 1rem;
+      }
+
+      /* Variables */
+      :root {
+         --desktop-font-size: 1.3rem/1.5;
+         --mobile-font-size: 1.1rem/1.4;
+         --text-color: #2d2d2d;
+         --link-color: blue;
+         --primary-color: lightsteelblue;
+         --secondary-color: aliceblue;
+         --tertiary-color: whitesmoke;
+      }
+
+      /* Typography */
+      body {
+         color: var(--text-color);
+         font: var(--desktop-font-size) -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      }
+
+      h1,h2,h3,h4,h5,h6,p,blockquote,dl,img,figure {
+         margin-top: 2rem;
+         margin-block-end: 0.5rem;
+      }
+
+      h1,h2,h3,h4,h5,h6 { font-weight: bold; }
+      h1 { font-size: 200%; }
+      h2 { font-size: 150%; }
+      h3 { font-size: 120%; }
+      h4,h5,h6 { font-size: 100%; }
+      h5, h6 { text-transform: uppercase; }
+
+      header h1 { border-bottom: 1px solid; }
+
+      p { margin: 2rem 0; }
+
+      a,a:visited { color: var(--link-color); }
+
+      strong, time, b { font-weight: bold; }
+      em, dfn, i { font-style: italic; }
+      sub { font-size: 60%; vertical-align: bottom; }
+      small { font-size: 80%; }
+
+      blockquote, q {
+         background: var(--secondary-color);
+         border-left: 10px solid var(--primary-color);
+         font-family: "Georgia", serif;
+         padding: 1rem;
+      }
+      blockquote p:first-child { margin-top: 0; }
+      cite {
+         font-family: "Georgia", serif;
+         font-style: italic;
+         font-weight: bold;
+      }
+
+      kbd,code,samp,pre,var { font-family: monospace; font-weight: bold; }
+      code, pre {
+         background: var(--tertiary-color);
+         padding: 0.5rem 1rem;
+         width: fit-content;
+      }
+
+      code pre, pre code {
+         padding: 0;
+      }
+
+      /* Elements */
+      hr {
+         background: var(--text-color);
+         border: 0;
+         height: 1px;
+         margin-bottom: 1rem;
+      }
+
+      iimg { max-width: 100%; }
+
+figure {
+    border: 1px solid var(--primary-color);
+    display: inline-block;
+    padding: 1rem;
+    width: auto;
+}
+figure img { margin: 0; }
+figure figcaption { font-size: 80%; }
+
+ul, ol { margin: 2rem 0; padding: 0 0 0 4rem; }
+
+dl dd { padding-left: 2rem; }
+
+table {
+    border: 1px solid var(--primary-color);
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+table caption { margin: 2rem 0; }
+table thead { text-align: center; }
+table tbody { text-align: right; }
+table tr { border-bottom: 1px solid var(--primary-color); }
+table tbody tr:nth-child(even) { background: var(--tertiary-color); }
+table th { background: var(--secondary-color); font-weight: bold; }
+table th, table td { padding: 1rem; }
+table th:not(last-of-type), table td:not(last-of-type) { border-right: 1px solid var(--primary-color); }
+
+input { border: 1px solid var(--text-color); padding: 0.8rem; }
+input:focus, input:active { background-color: var(--secondary-color); border-color: var(--link-color); }
+
+
+
+/* Mobile Styling */
+@media screen and (max-width: 50rem) {
+    body {
+        font: var(--mobile-font-size) -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto, Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol"
+    }
+    table { table-layout: auto; }
+}
+   </style>
+   <script>
+      states = [-1, -1, -1];
+      texts = [
+         [
+            "(2)(X)------------ X -------------- X --------- X\n" +
+            "(1) X -- X ------- X -------- X --- X --------- X\n" +
+            "(0) X -- X -- X -- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = 5",
+
+            "(2)[X]------------ X -------------- X --------- X\n" +
+            "(1)(X)-- X ------- X -------- X --- X --------- X\n" +
+            "(0) X -- X -- X -- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = 5",
+
+            "(2)[X]------------ X -------------- X --------- X\n" +
+            "(1) X --(X)------- X -------- X --- X --------- X\n" +
+            "(0) X -- X -- X -- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = 5",
+
+            "(2)[X]------------ X -------------- X --------- X\n" +
+            "(1) X --[X]------- X -------- X --- X --------- X\n" +
+            "(0) X --(X)-- X -- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = 5",
+
+            "(2)[X]------------ X -------------- X --------- X\n" +
+            "(1) X --[X]------- X -------- X --- X --------- X\n" +
+            "(0) X -- X --(X)-- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = 5",
+
+            "(2)[X]------------ X -------------- X --------- X\n" +
+            "(1) X --[X]------- X -------- X --- X --------- X\n" +
+            "(0) X -- X --[X]-- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = 5  e = [4, 1, min]"
+         ],
+         [
+            "(2)(X)------------ X -------------- X --------- X\n" +
+            "(1) X -- X ------- X -------- X --- X --------- X\n" +
+            "(0) X -- X -- X -- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = 20",
+
+            "(2) X ------------(X)-------------- X --------- X\n" +
+            "(1) X -- X ------- X -------- X --- X --------- X\n" +
+            "(0) X -- X -- X -- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = 20",
+
+            "(2) X ------------[X]-------------- X --------- X\n" +
+            "(1) X -- X -------(X)-------- X --- X --------- X\n" +
+            "(0) X -- X -- X -- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = 20",
+
+            "(2) X ------------[X]-------------- X --------- X\n" +
+            "(1) X -- X ------- X --------(X)--- X --------- X\n" +
+            "(0) X -- X -- X -- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = 20",
+
+            "(2) X ------------[X]-------------- X --------- X\n" +
+            "(1) X -- X ------- X --------[X]--- X --------- X\n" +
+            "(0) X -- X -- X -- X -- X ---(X)--- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = 20",
+
+            "(2) X ------------[X]-------------- X --------- X\n" +
+            "(1) X -- X ------- X --------[X]--- X --------- X\n" +
+            "(0) X -- X -- X -- X -- X ---[X]--- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = 20  e = [14, 14, 8]"
+         ],
+         [
+            "(2)(X)------------ X -------------- X --------- X\n" +
+            "(1) X -- X ------- X -------- X --- X --------- X\n" +
+            "(0) X -- X -- X -- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = -30",
+
+            "(2)[X]------------ X -------------- X --------- X\n" +
+            "(1)(X)-- X ------- X -------- X --- X --------- X\n" +
+            "(0) X -- X -- X -- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = -30",
+
+            "(2)[X]------------ X -------------- X --------- X\n" +
+            "(1)[X]-- X ------- X -------- X --- X --------- X\n" +
+            "(0)(X)-- X -- X -- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = -30",
+
+            "(2)[X]------------ X -------------- X --------- X\n" +
+            "(1)[X]-- X ------- X -------- X --- X --------- X\n" +
+            "(0)[X]-- X -- X -- X -- X --- X --- X ---- X -- X\n" +
+            "   min   1    4    8    12    14    20    30   max\n\nk = -30  e = [min, min, min]"
+         ]
+      ];
+
+      function next(which) {
+         if (states[which] >= texts[which].length - 1) {
+            return;
+         }
+         states[which] = states[which] + 1;
+         document.getElementById("example" + which).innerHTML = texts[which][states[which]];
+      }
+
+      function prev(which) {
+         if (states[which] <= 0) {
+            return;
+         }
+         states[which] = states[which] - 1;
+         document.getElementById("example" + which).innerHTML = texts[which][states[which]];
+      }
+   </script>
+</head>
+
+<body onload="next(0);next(1);next(2);">
+   <div class="center">
+      <h1 id="elso-hazi-feladat">Első házi feladat</h1>
+      <p>Az első házi feladat egy multilevel list készítése és azon a <strong>beszúrás</strong>,
+         <strong>keresés</strong> és <strong>törlés</strong> műveletek implementálása.</p>
+      <h2 id="__multilevel-list__"><strong>Multilevel list</strong></h2>
+      <p>Adott egy <em>rendezett láncolt lista</em>, például:</p>
+<pre>
+<code>HEAD -- X -- X -- X -- X --- X --- X --- X --- NIL
+        1 -- 4 -- 8 -- 10 -- 12 -- 20 -- 30</code></pre>
+      <p>A multilevel list ennél annyival okosabb, hogy nem csak a szomszédos elemek vannak
+         összekötve, hanem néha a távolabbiak is, akár több szinten:</p>
+<pre>
+<code>(2) X ------------ X -------------- X --------- X
+(1) X -- X ------- X -- X --------- X --------- X
+(0) X -- X -- X -- X -- X --- X --- X ---- X -- X
+   min   1    4    8    10    12    20    30   max</code></pre>
+      <p>Fontos, hogy nem lehetnek &quot;lyukak&quot; az egyes elemeknél - ha egy elemnek van összeköttetése az n-edik
+         szinten, akkor az n-1-ediken is kell, hogy legyen. A <strong>min</strong> és <strong>max</strong> speciális
+         csomópontok, úgy vesszük, hogy értékük minden lehetséges értéknél kisebb illetve nagyobb. Ez lehetővé teszi a
+         gyors keresést az elemek között.</p>
+      <h3 id="peldak-a-multilevel-list-mukodesere">Példák a multilevel list működésére</h3>
+      <p>Ha arra vagyunk kíváncsiak, hogy a 12 szerepel-e a listában, akkor</p>
+      <ol>
+         <li>Min-ről indulunk a legfelső szinten (2)</li>
+         <li>Következő elem: 8. Mivel 8 &lt; 12, továbblépünk 8-ra</li>
+         <li>Következő elem vizsgálata: 20 &gt;= 12, maradunk 8-on, de lemegyünk egy szinttel lejjebb (1)</li>
+         <li>Mivel 10 &lt; 12, továbblépünk 10-re</li>
+         <li>20 &gt;= 12, lemegyünk (0)-ra</li>
+         <li>12 &gt;= 12, megtaláltuk a keresett értéket, vége</li>
+         <li>Az aktuális pozíciótól (10) jobbra lévő elem a 12!</li>
+      </ol>
+      <p>Persze előfordulhat, hogy olyan elemet keresünk, ami nincs a halmazban. Például,
+         a 11-re ugyanezt a lépéssorozatot kéne megcsinálnunk - de a végén mivel 12 &gt;= 11, valamit a multilevel list
+         legalsó szintjén vagyunk, így a lista nem tratalmazza a ekresett elemet.</p>
+      <p>Ezen a kis példán természetesen nem látszik a multilevel list átütő sebessége, de nem
+         nehéz elképzelni, hogy nagy listák esetén, ahol egy-egy lépéssel akár több száz
+         elemet is átugorhatunk, sokkal gyorsabb, mint a lineáris keresés.</p>
+      <h3 id="muveletek">Műveletek</h3>
+      <p>A <strong>törlés</strong> ugyanúgy működik, mint a láncolt listánál, kivéve, hogy esetleg több
+         szintet is át kell láncolnunk. Például a fenti multilevel list a 10 törlése után:</p>
+      <pre>
+<code>(2) X ------------ X -------------- X --------- X
+(1) X -- X ------- X -------------- X --------- X
+(0) X -- X -- X -- X -------- X --- X ---- X -- X
+   min   1    4    8          12    20    30   max</code></pre>
+      <p>A <strong>beszúrás</strong> is ugyanúgy indul, mint a láncolt listában (14-et szúrtuk be):</p>
+<pre>
+<code>(2) X ------------ X -------------- X --------- X
+(1) X -- X ------- X -------------- X --------- X
+(0) X -- X -- X -- X -- X --- X --- X ---- X -- X
+   min   1    4    8    12    14    20    30   max</code></pre>
+      <p>Viszont néha szeretnénk az újonnan beszúrt elemet bekötni a magasabb szintekre
+         is. Ezt véletlenszerűen fogjuk csinálni: a (0) szintre mindeképp bekötjük az
+         elemet, majd 50% eséllyel kötjük be az (1) szintre, újabb 50% eséllyel a
+         (2)-re (tehát az n-edik szintig 0.5^n eséllyel fogunk eljutni). Tegyük fel, hogy
+         ebben az esetben az (1) szintre még felléptünk, a (2)-re már nem.</p>
+<pre><code>(2) X ------------ X -------------- X --------- X
+(1) X -- X ------- X -------- X --- X --------- X
+(0) X -- X -- X -- X -- X --- X --- X ---- X -- X
+   min   1    4    8    12    14    20    30   max</code></pre>
+      <p>Fontos, lyukak nem alakulhatnak ki - ha úgy döntünk, hogy az n-edik szintre
+         nem kötjük be az elemet, az n+1-edik szintre sem köthetjük be.</p>
+      <h2 id="__k-vetelm-nyek__"><strong>Követelmények</strong></h2>
+      <ul>
+         <li>Az elkészített struktúra meg kell, hogy feleljen a fenti leírásnak.</li>
+         <li>A multilevel list legalább 10 &quot;emeletes&quot; kell, hogy legyen. Nem szükséges menet
+            közben növelni vagy csökkenteni a szintek számát, rögzíthetjük a szintek maximális
+            számát rögtön az elején.</li>
+         <li>A megoldásnak le kell fordulnia a kiadott unit tesztekkel. Ehhez kell:<ol>
+               <li>Egy multilevel_list nevű osztály, amelynek elemei intek. (Szabad templatesen
+                  dolgozni, ilyenkor válasszunk valamilyen más nevet az osztálynak, aztán
+                  typedefeljük be az intes változatot multilevel_list-nek).</li>
+               <li>Egy insert(x) függvény, ami beszúrja x-et a listába. Ha x már szerepel
+                  a listában, ne csináljon semmit.</li>
+               <li>Egy erase(x) függvény, ami törli x-et a listából. Ha x nem szerepel a
+                  listában, ne csináljon semmit.</li>
+               <li>Egy contains(x) függvény, ami megmondja, hogy x szerepel-e a listában.</li>
+               <li>Egy size() függvény, ami megmondja a lista elemeinek számát.</li>
+            </ol>
+         </li>
+         <li>Forduljon <strong>-Werror</strong> <strong>-Wall</strong> <strong>-Wextra</strong>
+            <strong>-pedantic</strong>
+            kapcsolókkal.</li>
+         <li>Ne legyen memóriaszivárgás, segfault és hasonlók.</li>
+         <li>A tesztek pontszámai csak tájékoztató jellegűek.</li>
+         <li>A feladatot önállóan kell megoldani.</li>
+         <li>A megoldáshoz fel lehet használni az órai kódokat és az STL-t is.</li>
+         <li>A ~~~~~~~~~~ sor alatti résznek jelen formájában működnie kell, de bővíthatő.</li>
+      </ul>
+      <h2 id="__implement-ci-s-javaslatok__"><strong>Implementációs javaslatok</strong></h2>
+      <p>A következő javaslatokat megfogadni nem kötelező, de ajánlott.</p>
+      <p>A lista minden csomópontjában tároljuk a csomóponthoz tartozó elemet, és egy
+         tömböt a rákövetkező elemek pointereivel. A tömbök mérete
+         természetesen csomópontonként változhat, attól függően, hogy hány szintre
+         vannak bekötve.</p>
+      <p>Készítsünk egy segédfüggvényt, ami tetszőleges értékhez visszaadja <strong>minden</strong>
+         <strong>szinten</strong> az utolsó nála kisebb csomópontot. Vegyük az alábbi multilevel listet:</p>
+<pre><code>(2) X ------------ X -------------- X --------- X
+(1) X -- X ------- X -------- X --- X --------- X
+(0) X -- X -- X -- X -- X --- X --- X ---- X -- X
+   min   1    4    8    12    14    20    30   max</code></pre>
+      <p>A mágikus segédfüggvény ezen a listán a 14 bemenetre a [12, 8, 8] kimenetet
+         adná, az 5-re pedig a [4, 1, min]-et. (Egész pontosan nem a csomópontok értékeit
+         kell visszaadnia, hanem a csomópontokra mutató pointereket). Figyeljünk oda,
+         hogy határozottan <em>kisebb</em> csomópontot kell visszaadni! Ez a függvény mindhárom
+         megvalósítandó műveletnél (insert, contains, erase) hasznos lehet. </p>
+         <h2>Néhány fél-interaktív példa a működésére</h2> 
+         <p>
+            A példák a gombok segítségével léptethetők. <br> <em>[<strong>k:</strong> keresett elem, <strong>e:</strong> eredmény]</em>
+         </p>
+
+      <pre id="example0"> </pre>
+      <div class="space_after">
+         <button onclick="prev(0);">&lt;</button>
+         <button onclick="next(0);">&gt;</button>
+      </div>
+      
+      
+      <pre id="example1"> </pre>
+      <div class="space_after">
+         <button onclick="prev(1);">&lt;</button>
+         <button onclick="next(1);">&gt;</button>
+      </div>
+
+      <pre id="example2"></pre>
+      <div class="space_after">
+         <button onclick="prev(2);">&lt;</button>
+         <button onclick="next(2);">&gt;</button>
+      </div>
+   </div>
+</body>
+</html>

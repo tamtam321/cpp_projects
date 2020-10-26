@@ -1,0 +1,4 @@
+/home/tam/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/tam/Desktop/PPKE/7_felev/adatszerk/khf4/khf04_1.1/khf04
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/tam/Desktop/PPKE/7_felev/adatszerk/khf4/khf04_1.1/khf04/cmake-build-debug

@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead2/interval_tree/exceptions.hpp
+exception
+-
+
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead2/interval_tree/interval_tree.hpp
+iostream
+-
+exceptions.hpp
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead2/interval_tree/exceptions.hpp
+
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead2/interval_tree/main.cpp
+interval_tree.hpp
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead2/interval_tree/interval_tree.hpp
+woodpecker.hpp
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead2/interval_tree/woodpecker.hpp
+
+/home/tam/Desktop/PPKE/7_felev/adatszerk/nagyBead2/interval_tree/woodpecker.hpp
+chrono
+-
+cstdlib
+-
+cstring
+-
+fstream
+-
+functional
+-
+iostream
+-
+vector
+-
+
