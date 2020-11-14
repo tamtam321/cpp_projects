@@ -27,6 +27,8 @@ class multilevel_list
    // előtti utolsó node-dokra mutató pointert, minden szinten. Ezt használom hogy a szomszédságot megadjam, meg a keresésnél is használom.
    std::vector<Node*> lasts_node;
 
+   [[nodiscard]] std::vector<Node*> each_lvl_min(int v) const;
+
 public:
     multilevel_list();
 
@@ -34,8 +36,6 @@ public:
     ~multilevel_list();
 
     bool is_empyty();
-    std::vector<Node*> each_lvl_min(int v);
-    //void insert_update_adjacent(Node *n);
     void level_up(Node *n);
 
     void insert(int);
@@ -110,7 +110,7 @@ bool multilevel_list::is_empyty()
 
 // Ezzel adom meg a keresett érték előtti utolsó node-dokat miden szinten.
 // Csak itt járom be a teljes listát, ezt használom hogy minden egyes insert, erase, contains hívásnál csak 1-szer járom be a listát. (Szerintem)
-std::vector<multilevel_list::Node*> multilevel_list::each_lvl_min(int v)
+std::vector<multilevel_list::Node*> multilevel_list::each_lvl_min(int v) const
 {
     // elm vektor fogja tárolni az adott értékhez tartozó minden szinten az utolsó nála
     // kisebb node-dokat.
